@@ -1,0 +1,1284 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#"
+     xml:base="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#responde -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#responde">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Aluno"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Questao"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_conteudo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_conteudo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Dependência"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Questao"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Conteudo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_nivel -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_nivel">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Conteudo"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Dependência"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_questao -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_questao">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Conteudo"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Taxonomia"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_verbo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_verbo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Taxonomia"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_verboQ -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_verboQ">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Questao"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Aluno -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Aluno">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#responde"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Questao"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Array_Vetores_e_Matrizes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Array_Vetores_e_Matrizes">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Conteudo"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_nivel"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Nivel_5"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Atribuição_e_Tipos_de_Dados -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Atribuição_e_Tipos_de_Dados">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Conteudo"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_nivel"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Nivel_2"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Condicionais -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Condicionais">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Conteudo"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_nivel"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Nivel_3"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Conteudo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Conteudo">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_questao"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Taxonomia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="pt">Classe que apresenta os conteúdos da disciplina de Algoritmos.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Dependência -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Dependência">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_conteudo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Conteudo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="pt">Classe que apresenta a dependêcia entre os conteúdos que serão classificados de acordo com cada nível.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Funções_e_Procedimentos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Funções_e_Procedimentos">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Conteudo"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_nivel"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Nivel_6"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Laços -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Laços">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Conteudo"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_nivel"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Nivel_4"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Nivel_1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Nivel_1">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Dependência"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_nivel"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Nivel_1"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_conteudo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Variáveis_e_Constantes"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Nivel_2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Nivel_2">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Dependência"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_nivel"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Nivel_2"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_conteudo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Atribuição_e_Tipos_de_Dados"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Nivel_3 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Nivel_3">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Dependência"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_nivel"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Nivel_3"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_conteudo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Condicionais"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Nivel_4 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Nivel_4">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Dependência"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_nivel"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Nivel_4"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_conteudo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Laços"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Nivel_5 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Nivel_5">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Dependência"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_nivel"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Nivel_5"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_conteudo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Array_Vetores_e_Matrizes"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Nivel_6 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Nivel_6">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Dependência"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_nivel"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Nivel_6"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_conteudo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Funções_e_Procedimentos"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Questao -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Questao">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_conteudo"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Conteudo"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_verbo"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Taxonomia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Taxonomia">
+        <rdfs:comment xml:lang="pt">Classe que apresenta os Níveis da Taxonomia Revisada de Bloom onde serão classificados os indivíduos.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Variáveis_e_Constantes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Variáveis_e_Constantes">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Conteudo"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_nivel"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Nivel_1"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo">
+        <rdfs:comment xml:lang="pt">Classe que apresenta os verbos referentes a cada um dos níveis da Taxonomia de Bloom.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo1">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo2">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo3 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo3">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo4 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo4">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo5 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo5">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo6 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo6">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#1Lembrar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#1Lembrar">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Taxonomia"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_verbo"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo1"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#2Entender -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#2Entender">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Taxonomia"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_verbo"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo2"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#3Aplicar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#3Aplicar">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Taxonomia"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_verbo"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo3"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#4Analisar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#4Analisar">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Taxonomia"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_verbo"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo4"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#5Avaliar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#5Avaliar">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Taxonomia"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_verbo"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo5"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#6Criar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#6Criar">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Taxonomia"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#tem_verbo"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo6"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Aluno_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Aluno_1">
+        <responde rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Q3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Aluno_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Aluno_2">
+        <responde rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Q3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Aluno_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Aluno_3">
+        <responde rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Q4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Analise -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Analise">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Aplique -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Aplique">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Aponte -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Aponte">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Argumente -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Argumente">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Array_Vetores_e_Matrizes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Array_Vetores_e_Matrizes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Array_Vetores_e_Matrizes"/>
+        <tem_nivel rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#nivel5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Atribua -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Atribua">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Atribuição_e_Tipo_de_Dados -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Atribuição_e_Tipo_de_Dados">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Atribuição_e_Tipos_de_Dados"/>
+        <tem_nivel rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#nivel2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Categorize -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Categorize">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Cite -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Cite">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Classifique -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Classifique">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Compare -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Compare">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Compute -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Compute">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Condicionais -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Condicionais">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Condicionais"/>
+        <tem_nivel rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#nivel3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Construa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Construa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Crie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Crie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Critique -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Critique">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Deduza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Deduza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Defina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Defina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Demonstre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Demonstre">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Descreva -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Descreva">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Desenvolva -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Desenvolva">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Diferencie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Diferencie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Elaborar_Hipóteses -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Elaborar_Hipóteses">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Elabore -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Elabore">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Escreva -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Escreva">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Execute -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Execute">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Exemplifique -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Exemplifique">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Explique -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Explique">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Formule -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Formule">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Funções_e_Procedimentos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Funções_e_Procedimentos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Funções_e_Procedimentos"/>
+        <tem_nivel rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#nivel6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Gerar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Gerar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Identifique -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Identifique">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Ilustre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Ilustre">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Implemente -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Implemente">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Interprete -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Interprete">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Inventar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Inventar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Julgue -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Julgue">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Justifique -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Justifique">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Laços -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Laços">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Laços"/>
+        <tem_nivel rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#nivel4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Liste -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Liste">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Modifique -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Modifique">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Nomeie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Nomeie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Ordene -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Ordene">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Organize -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Organize">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Planejar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Planejar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Pondere -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Pondere">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Produzir -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Produzir">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Projete -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Projete">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Proponha -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Proponha">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Q3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Q3">
+        <tem_conteudo rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Funções_e_Procedimentos"/>
+        <tem_verboQ rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Separe"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Q4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Q4">
+        <tem_conteudo rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Laços"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Classifique"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Q5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Q5">
+        <tem_conteudo rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Laços"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Produzir"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Q6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Q6">
+        <tem_conteudo rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Variáveis_e_Constantes"/>
+        <tem_verboQ rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Compute"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#QTEste -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#QTEste">
+        <tem_conteudo rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Variáveis_e_Constantes"/>
+        <tem_verboQ rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Formule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Recomende -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Recomende">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Reconheça -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Reconheça">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Relembre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Relembre">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Resolva -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Resolva">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Resuma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Resuma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Rotule -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Rotule">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Separe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Separe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Sumarize -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Sumarize">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Teste -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Teste">
+        <tem_conteudo rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Variáveis_e_Constantes"/>
+        <tem_verboQ rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Reconheça"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Teste_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Teste_2">
+        <tem_conteudo rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Laços"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Sumarize"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Teste_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Teste_3">
+        <tem_conteudo rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Funções_e_Procedimentos"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Resuma"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Traduza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Traduza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Use -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Use">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Utilize -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Utilize">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Variáveis_e_Constantes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Variáveis_e_Constantes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Variáveis_e_Constantes"/>
+        <tem_nivel rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#nivel1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verifique -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verifique">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Verbo5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#nivel1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#nivel1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Nivel_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#nivel2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#nivel2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Nivel_2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#nivel3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#nivel3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Nivel_3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#nivel4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#nivel4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Nivel_4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#nivel5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#nivel5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Nivel_5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#nivel6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#nivel6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Nivel_6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#testando -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#testando">
+        <tem_conteudo rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Variáveis_e_Constantes"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Gerar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#teste_0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#teste_0">
+        <tem_conteudo rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Funções_e_Procedimentos"/>
+        <tem_verbo rdf:resource="http://www.semanticweb.org/usuário/ontologies/2019/7/untitled-ontology-17#Implemente"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
